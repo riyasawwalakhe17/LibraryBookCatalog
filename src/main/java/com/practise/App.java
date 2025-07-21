@@ -12,11 +12,9 @@ import com.practise.Utility.HibernateUtility;
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-    	while (true) {
+public class App {
+	public static void main(String[] args) {
+		while (true) {
 			Scanner sc = new Scanner(System.in);
 			System.out.println("----------------------------------------------------------------------------------------------------------------------------------------");
 			System.out.println("WELCOME TO LIBRARY BOOK CATALOG");
@@ -32,28 +30,21 @@ public class App
 			BookRepository user = new BookRepository();
 			switch (choice) {
 			case 1:
-				System.out.println("Please Enter ID: ");
-				int bookid = sc.nextInt();
-				user.addData();
+				user.addData(sc);
 				break;
-				
+
 			case 2:
-				System.out.println("Please Enter Author name: ");
-				String name = sc.next();
-				user.searchData();
+				user.searchData(sc);
 				break;
-//				
+
 			case 3:
-				user.getUpdatedData();
+				user.updateData(sc);
 				break;
-////			
+
 			case 4:
-				System.out.println("Enter ISBN_No: ");
-				String ISBN_No = sc.next();
-				user.getDeletedData();
+				user.deleteData(sc);
 				break;
-//			}
-    	}
-    }
- }
+			}
+		}
+	}
 }

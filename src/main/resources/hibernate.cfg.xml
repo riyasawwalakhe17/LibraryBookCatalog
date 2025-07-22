@@ -17,6 +17,6 @@
 	  <property name="hibernate.hbm2ddl.auto">update</property>
 	  
 	  <mapping class = "com.practise.Entity.Book"></mapping>
-	  
+	  <mapping class = "com.practise.Entity.BookReview"></mapping>
     </session-factory>
 </hibernate-configuration>

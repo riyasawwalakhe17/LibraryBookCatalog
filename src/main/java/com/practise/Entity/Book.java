@@ -1,17 +1,20 @@
 package com.practise.Entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "book_details")
+@Table(name = "books")
 public class Book {
 
 	@Id
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	private String title;
@@ -21,6 +24,11 @@ public class Book {
 	private String ISBN_No;
 	
 	private int availableCopies;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "book_id")
+	private BookReview bookreview;
+	
 
 	public int getId() {
 		return id;
@@ -60,6 +68,16 @@ public class Book {
 
 	public void setAvailableCopies(int availableCopies) {
 		this.availableCopies = availableCopies;
+	}
+	
+	
+
+	public BookReview getBookreview() {
+		return bookreview;
+	}
+
+	public void setBookreview(BookReview bookreview) {
+		this.bookreview = bookreview;
 	}
 
 	@Override

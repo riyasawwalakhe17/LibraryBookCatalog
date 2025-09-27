@@ -18,6 +18,7 @@ public class GetAllData {
 
 			List<Book> bookList = session.createQuery("select b FROM Book b", Book.class).getResultList();
 
+			System.out.println("List of Books: ");
 			bookList.stream().forEach(k -> System.out.println(k.toString()));
 
 			transaction.commit();

@@ -31,6 +31,7 @@ public static void main(String[] args) {
 		book.setAvailableCopies(2);
 		book.setBookreview(breview);
 		
+		System.out.println("Data Saved sucessfully");
 		session.persist(book);
 		transaction.commit();
 		session.close();

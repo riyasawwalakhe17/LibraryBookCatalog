@@ -18,6 +18,7 @@ public class GetDeleteById_bidirection {
 		BookReview bReview = session.find(BookReview.class, 1);
 		session.remove(bReview);
 
+		System.out.println("Data deleted successfully");
 		transaction.commit();
 		session.close();
 	}

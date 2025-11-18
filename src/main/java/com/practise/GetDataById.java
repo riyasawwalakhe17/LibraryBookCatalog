@@ -15,6 +15,7 @@ public static void main(String[] args) {
 		SessionFactory factory = HibernateUtility.getSessionFactory();
 		Session session = factory.openSession();
 		Transaction transaction = session.beginTransaction();
+		System.out.println("Book detail are: ");
 		
 		int id = 1;
 		Book book = session.find(Book.class, 2);

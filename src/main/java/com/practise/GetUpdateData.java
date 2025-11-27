@@ -30,7 +30,7 @@ public class GetUpdateData {
 			book.getBookreview().setComment("Great insights on focus and productivity");
 			
 
-			System.out.println("Data updated successfully");
+			System.out.println("Book Data updated successfully");
 			transaction.commit();
 			session.close();
 		}

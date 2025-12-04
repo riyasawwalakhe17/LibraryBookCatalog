@@ -29,7 +29,7 @@ public static void main(String[] args) {
 		breview.setComment("A beautiful journey of hope");
 		breview.setBook(book);
 		
-		System.out.println("Data Saved sucessfully");
+		System.out.println("Book Data Saved sucessfully");
 		session.persist(breview);
 		transaction.commit();
 		session.close();

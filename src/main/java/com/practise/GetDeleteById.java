@@ -18,7 +18,7 @@ public class GetDeleteById {
 		Book book = session.find(Book.class, 4);
 		session.remove(book);
 
-		System.out.println("Data deleted successfully");
+		System.out.println("Book Data deleted successfully");
 		transaction.commit();
 		session.close();
 	}

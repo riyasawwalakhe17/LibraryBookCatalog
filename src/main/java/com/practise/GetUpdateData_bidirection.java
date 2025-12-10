@@ -29,7 +29,7 @@ public class GetUpdateData_bidirection {
 		bReview.getBook().setISBN_No("9781577314806");
 		bReview.getBook().setAvailableCopies(5);
 		
-		System.out.println("Data updated successfully");
+		System.out.println("Book Data updated successfully");
 		transaction.commit();
 		session.close();
 	}
